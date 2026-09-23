@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>URAC — Unité de Recherche en Anatomie Clinique</title>
+        <meta name="description" content="Page introuvable." />
+        <meta name="theme-color" content="#032a52" />
+        <meta property="og:title" content="URAC — Unité de Recherche en Anatomie Clinique" />
+        <meta property="og:description" content="Page introuvable." />
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script>
+            (function () {
+                var theme = 'light';
+                try {
+                    var s = localStorage.getItem('urac_theme');
+                    if (s === 'dark' || s === 'light') theme = s;
+                    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+                } catch (e) {}
+                document.documentElement.dataset.theme = theme;
+            })();
+        </script>
+    </head>
+    <body class="is-loading" data-page="" data-title="notFound.title">
+        <div id="site-header"></div>
+
+        <main id="main" class="page">
+            <section class="container not-found">
+                <p class="not-found__code">404</p>
+                <h1 data-i18n="notFound.title"></h1>
+                <p class="section__lead" data-i18n="notFound.text"></p>
+                <p style="margin-top:var(--space-6)"><a class="btn" href="index.html" data-i18n="notFound.back"></a></p>
+            </section>
+        </main>
+
+        <div id="site-footer"></div>
+
+        <script src="assets/js/config.js"></script>
+        <script src="assets/js/i18n.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

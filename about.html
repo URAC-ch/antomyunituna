@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>URAC — Unité de Recherche en Anatomie Clinique</title>
+        <meta name="description" content="Mission, objectifs et axes de recherche de l'URAC." />
+        <meta name="theme-color" content="#032a52" />
+        <meta property="og:title" content="URAC — Unité de Recherche en Anatomie Clinique" />
+        <meta property="og:description" content="Mission, objectifs et axes de recherche de l'URAC." />
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script>
+            (function () {
+                var theme = 'light';
+                try {
+                    var s = localStorage.getItem('urac_theme');
+                    if (s === 'dark' || s === 'light') theme = s;
+                    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+                } catch (e) {}
+                document.documentElement.dataset.theme = theme;
+            })();
+        </script>
+    </head>
+    <body class="is-loading" data-page="about" data-title="about.title">
+        <div id="site-header"></div>
+
+        <main id="main" class="page">
+            <div class="page-header">
+                <div class="container">
+                    <p class="eyebrow" data-i18n="about.eyebrow"></p>
+                    <h1 class="page-header__title" data-i18n="about.pageTitle"></h1>
+                    <p class="page-header__lead" data-i18n="about.lead"></p>
+                </div>
+            </div>
+            <div class="container">
+                <section class="section split split--top" style="--split: 1fr 1fr">
+                    <div class="surface reveal">
+                        <span class="card__icon" data-icon="book"></span>
+                        <h2 class="section__title" style="margin-top:var(--space-4)" data-i18n="about.missionTitle"></h2>
+                        <p data-i18n="about.mission"></p>
+                    </div>
+                    <div class="surface reveal">
+                        <h2 class="section__title" data-i18n="about.objectivesTitle"></h2>
+                        <ul class="checklist">
+                            <li data-i18n="about.objectives.o1"></li>
+                            <li data-i18n="about.objectives.o2"></li>
+                            <li data-i18n="about.objectives.o3"></li>
+                            <li data-i18n="about.objectives.o4"></li>
+                            <li data-i18n="about.objectives.o5"></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section__head">
+                        <h2 class="section__title" data-i18n="about.axesTitle"></h2>
+                        <p class="section__lead" data-i18n="about.axesLead"></p>
+                    </div>
+                    <div class="grid" style="--col-min: 15rem">
+                        <article class="card reveal">
+                            <span class="card__icon" data-icon="scalpel"></span>
+                            <h3 class="card__title" data-i18n="about.axes.a1.title"></h3>
+                            <p class="card__text" data-i18n="about.axes.a1.text"></p>
+                        </article>
+                        <article class="card reveal">
+                            <span class="card__icon" data-icon="scan"></span>
+                            <h3 class="card__title" data-i18n="about.axes.a2.title"></h3>
+                            <p class="card__text" data-i18n="about.axes.a2.text"></p>
+                        </article>
+                        <article class="card reveal">
+                            <span class="card__icon" data-icon="cube"></span>
+                            <h3 class="card__title" data-i18n="about.axes.a3.title"></h3>
+                            <p class="card__text" data-i18n="about.axes.a3.text"></p>
+                        </article>
+                        <article class="card reveal">
+                            <span class="card__icon" data-icon="ai"></span>
+                            <h3 class="card__title" data-i18n="about.axes.a4.title"></h3>
+                            <p class="card__text" data-i18n="about.axes.a4.text"></p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section reveal">
+                    <div class="section__head">
+                        <h2 class="section__title" data-i18n="about.historyTitle"></h2>
+                    </div>
+                    <p class="callout" data-i18n="about.history"></p>
+                </section>
+            </div>
+        </main>
+
+        <div id="site-footer"></div>
+
+        <script src="assets/js/config.js"></script>
+        <script src="assets/js/i18n.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
