@@ -109,7 +109,7 @@ window.URAC_I18N = {
             lead:
                 "Des chercheurs, enseignants et étudiants engagés dans l'étude et l'enseignement de l'anatomie clinique.",
             headTitle: "Responsable de l'unité",
-            headName: 'Dr Ahmedou Moulaye Idriss',
+            headName: 'Pr Ahmedou Moulaye Idriss',
             headRole: 'Anatomiste et Chirurgien Général',
             headOrg: 'Université de Nouakchott Al Aasriya (FMPOS)',
             headExtra: "Président de l'Association Mauritanienne d'Anatomie Clinique",
@@ -292,7 +292,7 @@ window.URAC_I18N = {
             pageTitle: 'Our team',
             lead: 'Researchers, faculty, and students committed to the study and teaching of clinical anatomy.',
             headTitle: 'Head of the Unit',
-            headName: 'Dr. Ahmedou Moulaye Idriss',
+            headName: 'Prof. Ahmedou Moulaye Idriss',
             headRole: 'Anatomist and General Surgeon',
             headOrg: 'University of Nouakchott Al Aasriya (FMPOS)',
             headExtra: 'President of the Mauritanian Association of Clinical Anatomy',
