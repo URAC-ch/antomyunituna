@@ -9,22 +9,14 @@
  */
 window.URAC_CONFIG = {
     contact: {
-        email: '', // ex. 'urac@una.mr'
-        phone: '', // ex. '+222 00 00 00 00'
+        email: 'amdriss6@gmail.com',
+        phone: '+222 36 64 71 73',
         address: {
-            fr: '', // ex. 'FMPOS, Nouakchott, Mauritanie'
-            en: '',
+            fr: 'Nouakchott, Mauritanie',
+            en: 'Nouakchott, Mauritania',
         },
     },
 
-    // Réseaux sociaux / Social links — laissez '' pour masquer / leave '' to hide
-    social: {
-        linkedin: '',
-        researchgate: '',
-        googleScholar: '',
-        facebook: '',
-        x: '',
-    },
 
     /*
      * Membres de l'équipe / Team members

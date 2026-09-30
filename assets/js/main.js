@@ -248,19 +248,6 @@
         );
     }
 
-    function renderSocial() {
-        var s = CONFIG.social || {};
-        var names = { linkedin: 'LinkedIn', researchgate: 'ResearchGate', googleScholar: 'Google Scholar', facebook: 'Facebook', x: 'X' };
-        var links = Object.keys(names)
-            .filter(function (k) {
-                return s[k];
-            })
-            .map(function (k) {
-                return '<a class="btn-ghost" href="' + escapeHtml(s[k]) + '" target="_blank" rel="noopener">' + names[k] + '</a>';
-            });
-        return links.length ? '<div class="cluster">' + links.join('') + '</div>' : placeholder();
-    }
-
     /* ---------- Apply translations ---------- */
 
     function applyI18n() {
@@ -304,7 +291,6 @@
         var lists = {
             researchers: function () { return renderMembers(CONFIG.researchers, 'team.researchersEmpty'); },
             students: function () { return renderMembers(CONFIG.students, 'team.studentsEmpty'); },
-            social: renderSocial,
         };
         document.querySelectorAll('[data-list]').forEach(function (el) {
             var fn = lists[el.getAttribute('data-list')];

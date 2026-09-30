@@ -152,6 +152,7 @@ window.URAC_I18N = {
             eyebrow: 'Partenariats et collaborations',
             pageTitle: 'Nos partenaires internationaux',
             lead: "L'URAC développe des collaborations scientifiques actives avec plusieurs institutions internationales de premier plan.",
+            website: 'Visiter le site web',
             p1: {
                 name: "Queen's University",
                 country: 'Canada',
@@ -180,7 +181,6 @@ window.URAC_I18N = {
             email: 'Email',
             phone: 'Téléphone',
             address: 'Adresse',
-            follow: 'Suivez-nous',
         },
         notFound: {
             title: 'Page introuvable',
@@ -334,6 +334,7 @@ window.URAC_I18N = {
             eyebrow: 'Partnerships and collaborations',
             pageTitle: 'Our international partners',
             lead: 'URAC maintains active scientific collaborations with several leading international institutions.',
+            website: 'Visit website',
             p1: {
                 name: "Queen's University",
                 country: 'Canada',
@@ -362,7 +363,6 @@ window.URAC_I18N = {
             email: 'Email',
             phone: 'Phone',
             address: 'Address',
-            follow: 'Follow us',
         },
         notFound: {
             title: 'Page not found',
