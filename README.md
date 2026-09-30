@@ -1,43 +1,33 @@
 # URAC — Unité de Recherche en Anatomie Clinique
 
-Site web de l'Unité de Recherche en Anatomie Clinique (URAC), Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS), Université de Nouakchott Al Aasriya, Mauritanie.
+Site web officiel de l'**Unité de Recherche en Anatomie Clinique (URAC)**, rattachée à la Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS) de l'Université de Nouakchott Al Aasriya, Mauritanie.
 
-- **Bilingue** : français / anglais (sélecteur 🌐 dans la barre de navigation, ou `?lang=en` dans l'URL)
-- **Responsive** : mobile, tablette, ordinateur
-- **Mode clair / sombre**
-- **Statique** : HTML, CSS et JavaScript, sans dépendance ni étape de build
+🌐 **Site :** https://urac-ch.github.io/antomyunituna/
 
-## Pages
+## À propos de l'URAC
 
-Le site tient dans une seule page, `index.html`. Les boutons du menu affichent une vue sans recharger la page (adresse `index.html#vue`) :
+L'URAC rassemble des chercheurs, enseignants et étudiants engagés dans l'étude et l'enseignement de l'anatomie clinique, à la croisée de la pratique médicale, de l'imagerie médicale et des technologies numériques appliquées à la santé.
 
-| Vue | Contenu |
-| --- | --- |
-| `#home` | Accueil |
-| `#about` | À propos (mission, objectifs, axes de recherche) |
-| `#team` | Équipe |
-| `#research` | Recherches et projets |
-| `#partners` | Partenariats et collaborations |
-| `#contact` | Contact (coordonnées) |
+### Axes de recherche
 
-## Modifier le contenu
+- Anatomie clinique et chirurgicale
+- Imagerie médicale et segmentation assistée par IA
+- Apprentissage interactif de l'anatomie en 3D
+- IA en santé et contextes à ressources limitées
 
-- **Textes (FR et EN)** : `assets/js/i18n.js` — chaque texte existe en `fr` et en `en`.
-- **Coordonnées, réseaux sociaux, membres de l'équipe** : `assets/js/config.js`.
-  Les champs laissés vides s'affichent « À compléter » (ou sont masqués).
-- **Styles / couleurs** : `assets/css/style.css` (variables en haut du fichier).
-- **Logo** : `assets/img/logo.svg`.
+### Partenaires
 
-## Aperçu en local
+- Queen's University — Canada
+- Harvard — Brigham and Women's Hospital — États-Unis
+- Université de Las Palmas de Gran Canaria — Espagne
 
-```bash
-python3 -m http.server 8000
-# puis ouvrir http://localhost:8000
-```
+## Contenu du site
 
-## Déploiement sur GitHub Pages
+- Accueil
+- À propos : mission, objectifs, axes de recherche
+- Équipe
+- Recherche : projets en cours
+- Partenariats
+- Contact
 
-Le workflow `.github/workflows/pages.yml` publie le site à chaque push sur `main`.
-
-1. Dans le dépôt GitHub : **Settings → Pages → Build and deployment → Source : GitHub Actions**.
-2. Fusionner les changements dans `main` : le site est publié sur `https://<utilisateur>.github.io/<dépôt>/`.
+Le site est disponible en **français** et en **anglais**, en mode clair ou sombre, sur mobile, tablette et ordinateur.
