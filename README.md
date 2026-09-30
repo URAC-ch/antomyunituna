@@ -9,34 +9,24 @@ Site web de l'Unité de Recherche en Anatomie Clinique (URAC), Faculté de Méde
 
 ## Pages
 
-| Fichier | Contenu |
+Le site tient dans une seule page, `index.html`. Les boutons du menu affichent une vue sans recharger la page (adresse `index.html#vue`) :
+
+| Vue | Contenu |
 | --- | --- |
-| `index.html` | Accueil |
-| `about.html` | À propos (mission, objectifs, axes de recherche) |
-| `team.html` | Équipe |
-| `research.html` | Recherches et projets |
-| `publications.html` | Publications |
-| `partners.html` | Partenariats et collaborations |
-| `teaching.html` | Formation et enseignement |
-| `news.html` | Actualités / événements |
-| `resources.html` | Ressources |
-| `contact.html` | Contact |
+| `#home` | Accueil |
+| `#about` | À propos (mission, objectifs, axes de recherche) |
+| `#team` | Équipe |
+| `#research` | Recherches et projets |
+| `#partners` | Partenariats et collaborations |
+| `#contact` | Contact (coordonnées) |
 
 ## Modifier le contenu
 
 - **Textes (FR et EN)** : `assets/js/i18n.js` — chaque texte existe en `fr` et en `en`.
-- **Coordonnées, réseaux sociaux, liens, membres de l'équipe, publications, actualités** : `assets/js/config.js`.
+- **Coordonnées, réseaux sociaux, membres de l'équipe** : `assets/js/config.js`.
   Les champs laissés vides s'affichent « À compléter » (ou sont masqués).
 - **Styles / couleurs** : `assets/css/style.css` (variables en haut du fichier).
 - **Logo** : `assets/img/logo.svg`.
-
-Exemple d'ajout d'une publication dans `config.js` :
-
-```js
-publications: [
-    { year: 2025, authors: 'A. Moulaye Idriss, et al.', title: 'Titre de l’article', venue: 'Nom de la revue', url: 'https://doi.org/...' },
-],
-```
 
 ## Aperçu en local
 

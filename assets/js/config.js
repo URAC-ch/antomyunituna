@@ -26,31 +26,10 @@ window.URAC_CONFIG = {
         x: '',
     },
 
-    // Liens institutionnels / Institutional links
-    links: {
-        university: '',
-        fmpos: '',
-        association: '',
-        slicer: 'https://www.slicer.org/',
-        openAnatomy: 'https://www.openanatomy.org/',
-    },
-
     /*
      * Membres de l'équipe / Team members
      * { name: 'Dr X', title: { fr: '...', en: '...' }, role: { fr: '...', en: '...' }, photo: 'assets/img/team/x.jpg' }
      */
     researchers: [],
     students: [],
-
-    /*
-     * Publications (les plus récentes en premier / most recent first)
-     * { year: 2025, authors: 'A. Author, B. Author', title: '...', venue: 'Journal', url: 'https://...' }
-     */
-    publications: [],
-
-    /*
-     * Actualités supplémentaires / Extra news items
-     * { date: { fr: 'Mars 2026', en: 'March 2026' }, title: { fr: '...', en: '...' }, text: { fr: '...', en: '...' } }
-     */
-    news: [],
 };

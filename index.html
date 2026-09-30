@@ -25,116 +25,363 @@
             })();
         </script>
     </head>
-    <body class="is-loading" data-page="home" data-title="home.title">
+    <body class="is-loading">
         <div id="site-header"></div>
 
         <main id="main" class="page">
-            <section class="hero">
-                <div class="container split" style="--split: 1.1fr 0.9fr">
-                    <div>
-                        <p class="eyebrow" data-i18n="home.eyebrow"></p>
-                        <h1 class="hero__title" data-i18n="home.heroTitle"></h1>
-                        <p class="hero__lead" data-i18n="home.heroLead"></p>
-                        <p class="hero__lead" data-i18n="home.heroLead2"></p>
-                        <div class="cluster">
-                            <a class="btn" href="research.html"><span data-i18n="home.ctaProjects"></span><span data-icon="arrow"></span></a>
-                            <a class="btn-ghost" href="contact.html" data-i18n="home.ctaContact"></a>
-                        </div>
-                    </div>
-                    <aside class="hero-panel" aria-labelledby="panel-title">
-                        <img class="hero-panel__art" src="assets/img/hero.svg" alt="" width="340" height="240" />
-                        <h2 id="panel-title" class="visually-hidden" data-i18n="home.panelTitle"></h2>
-                        <ul class="hero-panel__list">
-                            <li><span class="dot"></span><span data-i18n="about.axes.a1.title"></span></li>
-                            <li><span class="dot"></span><span data-i18n="about.axes.a2.title"></span></li>
-                            <li><span class="dot"></span><span data-i18n="about.axes.a3.title"></span></li>
-                            <li><span class="dot"></span><span data-i18n="about.axes.a4.title"></span></li>
-                        </ul>
-                    </aside>
-                </div>
-            </section>
-
-            <div class="container">
-                <section class="section reveal">
-                    <ul class="stat-strip">
-                        <li><span class="stat-strip__value">4</span><span class="stat-strip__label" data-i18n="home.stats.projects"></span></li>
-                        <li><span class="stat-strip__value">4</span><span class="stat-strip__label" data-i18n="home.stats.axes"></span></li>
-                        <li><span class="stat-strip__value">3</span><span class="stat-strip__label" data-i18n="home.stats.partners"></span></li>
-                        <li><span class="stat-strip__value">3</span><span class="stat-strip__label" data-i18n="home.stats.countries"></span></li>
-                    </ul>
-                </section>
-
-                <section class="section">
-                    <div class="section__head">
-                        <h2 class="section__title" data-i18n="home.introTitle"></h2>
-                        <p class="section__lead" data-i18n="home.introLead"></p>
-                    </div>
-                    <div class="grid" style="--col-min: 15rem">
-                        <article class="card reveal">
-                            <span class="card__icon" data-icon="scalpel"></span>
-                            <h3 class="card__title" data-i18n="about.axes.a1.title"></h3>
-                            <p class="card__text" data-i18n="about.axes.a1.text"></p>
-                        </article>
-                        <article class="card reveal">
-                            <span class="card__icon" data-icon="scan"></span>
-                            <h3 class="card__title" data-i18n="about.axes.a2.title"></h3>
-                            <p class="card__text" data-i18n="about.axes.a2.text"></p>
-                        </article>
-                        <article class="card reveal">
-                            <span class="card__icon" data-icon="cube"></span>
-                            <h3 class="card__title" data-i18n="about.axes.a3.title"></h3>
-                            <p class="card__text" data-i18n="about.axes.a3.text"></p>
-                        </article>
-                        <article class="card reveal">
-                            <span class="card__icon" data-icon="ai"></span>
-                            <h3 class="card__title" data-i18n="about.axes.a4.title"></h3>
-                            <p class="card__text" data-i18n="about.axes.a4.text"></p>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <div class="section__head">
-                        <h2 class="section__title" data-i18n="home.projectsTitle"></h2>
-                        <p class="section__lead" data-i18n="home.projectsLead"></p>
-                    </div>
-                    <div class="grid" style="--col-min: 16rem">
-                        <a class="card reveal" href="research.html">
-                            <span class="card__icon" data-icon="scan"></span>
-                            <h3 class="card__title" data-i18n="research.p1.title"></h3>
-                            <p class="card__text" data-i18n="research.p1.text"></p>
-                            <span class="card__more" data-i18n="common.learnMore"></span>
-                        </a>
-                        <a class="card reveal" href="research.html">
-                            <span class="card__icon" data-icon="cube"></span>
-                            <h3 class="card__title" data-i18n="research.p2.title"></h3>
-                            <p class="card__text" data-i18n="research.p2.text"></p>
-                            <span class="card__more" data-i18n="common.learnMore"></span>
-                        </a>
-                        <a class="card reveal" href="research.html">
-                            <span class="card__icon" data-icon="microscope"></span>
-                            <h3 class="card__title" data-i18n="research.p3.title"></h3>
-                            <p class="card__text" data-i18n="research.p3.text"></p>
-                            <span class="card__more" data-i18n="common.learnMore"></span>
-                        </a>
-                        <a class="card reveal" href="research.html">
-                            <span class="card__icon" data-icon="ultrasound"></span>
-                            <h3 class="card__title" data-i18n="research.p4.title"></h3>
-                            <p class="card__text" data-i18n="research.p4.text"></p>
-                            <span class="card__more" data-i18n="common.learnMore"></span>
-                        </a>
-                    </div>
-                </section>
-
-                <section class="section reveal">
-                    <div class="cta-band">
+            <div class="view" data-view="home" data-title="home.title">
+                <section class="hero">
+                    <div class="container split" style="--split: 1.1fr 0.9fr">
                         <div>
-                            <h2 data-i18n="home.ctaTitle"></h2>
-                            <p data-i18n="home.ctaText"></p>
+                            <p class="eyebrow" data-i18n="home.eyebrow"></p>
+                            <h1 class="hero__title" data-i18n="home.heroTitle"></h1>
+                            <p class="hero__lead" data-i18n="home.heroLead"></p>
+                            <p class="hero__lead" data-i18n="home.heroLead2"></p>
+                            <div class="cluster">
+                                <a class="btn" href="#research"><span data-i18n="home.ctaProjects"></span><span data-icon="arrow"></span></a>
+                                <a class="btn-ghost" href="#contact" data-i18n="home.ctaContact"></a>
+                            </div>
                         </div>
-                        <a class="btn" href="contact.html" data-i18n="home.ctaButton"></a>
+                        <aside class="hero-panel" aria-labelledby="panel-title">
+                            <img class="hero-panel__art" src="assets/img/hero.svg" alt="" width="340" height="240" />
+                            <h2 id="panel-title" class="visually-hidden" data-i18n="home.panelTitle"></h2>
+                            <ul class="hero-panel__list">
+                                <li><span class="dot"></span><span data-i18n="about.axes.a1.title"></span></li>
+                                <li><span class="dot"></span><span data-i18n="about.axes.a2.title"></span></li>
+                                <li><span class="dot"></span><span data-i18n="about.axes.a3.title"></span></li>
+                                <li><span class="dot"></span><span data-i18n="about.axes.a4.title"></span></li>
+                            </ul>
+                        </aside>
                     </div>
                 </section>
+
+                <div class="container">
+                    <section class="section reveal">
+                        <ul class="stat-strip">
+                            <li><span class="stat-strip__value">4</span><span class="stat-strip__label" data-i18n="home.stats.projects"></span></li>
+                            <li><span class="stat-strip__value">4</span><span class="stat-strip__label" data-i18n="home.stats.axes"></span></li>
+                            <li><span class="stat-strip__value">3</span><span class="stat-strip__label" data-i18n="home.stats.partners"></span></li>
+                            <li><span class="stat-strip__value">3</span><span class="stat-strip__label" data-i18n="home.stats.countries"></span></li>
+                        </ul>
+                    </section>
+
+                    <section class="section">
+                        <div class="section__head">
+                            <h2 class="section__title" data-i18n="home.introTitle"></h2>
+                            <p class="section__lead" data-i18n="home.introLead"></p>
+                        </div>
+                        <div class="grid" style="--col-min: 15rem">
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="scalpel"></span>
+                                <h3 class="card__title" data-i18n="about.axes.a1.title"></h3>
+                                <p class="card__text" data-i18n="about.axes.a1.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="scan"></span>
+                                <h3 class="card__title" data-i18n="about.axes.a2.title"></h3>
+                                <p class="card__text" data-i18n="about.axes.a2.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="cube"></span>
+                                <h3 class="card__title" data-i18n="about.axes.a3.title"></h3>
+                                <p class="card__text" data-i18n="about.axes.a3.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="ai"></span>
+                                <h3 class="card__title" data-i18n="about.axes.a4.title"></h3>
+                                <p class="card__text" data-i18n="about.axes.a4.text"></p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <div class="section__head">
+                            <h2 class="section__title" data-i18n="home.projectsTitle"></h2>
+                            <p class="section__lead" data-i18n="home.projectsLead"></p>
+                        </div>
+                        <div class="grid" style="--col-min: 16rem">
+                            <a class="card reveal" href="#research">
+                                <span class="card__icon" data-icon="scan"></span>
+                                <h3 class="card__title" data-i18n="research.p1.title"></h3>
+                                <p class="card__text" data-i18n="research.p1.text"></p>
+                                <span class="card__more" data-i18n="common.learnMore"></span>
+                            </a>
+                            <a class="card reveal" href="#research">
+                                <span class="card__icon" data-icon="cube"></span>
+                                <h3 class="card__title" data-i18n="research.p2.title"></h3>
+                                <p class="card__text" data-i18n="research.p2.text"></p>
+                                <span class="card__more" data-i18n="common.learnMore"></span>
+                            </a>
+                            <a class="card reveal" href="#research">
+                                <span class="card__icon" data-icon="microscope"></span>
+                                <h3 class="card__title" data-i18n="research.p3.title"></h3>
+                                <p class="card__text" data-i18n="research.p3.text"></p>
+                                <span class="card__more" data-i18n="common.learnMore"></span>
+                            </a>
+                            <a class="card reveal" href="#research">
+                                <span class="card__icon" data-icon="ultrasound"></span>
+                                <h3 class="card__title" data-i18n="research.p4.title"></h3>
+                                <p class="card__text" data-i18n="research.p4.text"></p>
+                                <span class="card__more" data-i18n="common.learnMore"></span>
+                            </a>
+                        </div>
+                    </section>
+
+                    <section class="section reveal">
+                        <div class="cta-band">
+                            <div>
+                                <h2 data-i18n="home.ctaTitle"></h2>
+                                <p data-i18n="home.ctaText"></p>
+                            </div>
+                            <a class="btn" href="#contact" data-i18n="home.ctaButton"></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="view" data-view="about" data-title="about.title" hidden>
+                <div class="page-header">
+                    <div class="container">
+                        <p class="eyebrow" data-i18n="about.eyebrow"></p>
+                        <h1 class="page-header__title" data-i18n="about.pageTitle"></h1>
+                        <p class="page-header__lead" data-i18n="about.lead"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <section class="section split split--top" style="--split: 1fr 1fr">
+                        <div class="surface reveal">
+                            <span class="card__icon" data-icon="book"></span>
+                            <h2 class="section__title" style="margin-top:var(--space-4)" data-i18n="about.missionTitle"></h2>
+                            <p data-i18n="about.mission"></p>
+                        </div>
+                        <div class="surface reveal">
+                            <h2 class="section__title" data-i18n="about.objectivesTitle"></h2>
+                            <ul class="checklist">
+                                <li data-i18n="about.objectives.o1"></li>
+                                <li data-i18n="about.objectives.o2"></li>
+                                <li data-i18n="about.objectives.o3"></li>
+                                <li data-i18n="about.objectives.o4"></li>
+                                <li data-i18n="about.objectives.o5"></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="section">
+                        <div class="section__head">
+                            <h2 class="section__title" data-i18n="about.axesTitle"></h2>
+                            <p class="section__lead" data-i18n="about.axesLead"></p>
+                        </div>
+                        <div class="grid" style="--col-min: 15rem">
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="scalpel"></span>
+                                <h3 class="card__title" data-i18n="about.axes.a1.title"></h3>
+                                <p class="card__text" data-i18n="about.axes.a1.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="scan"></span>
+                                <h3 class="card__title" data-i18n="about.axes.a2.title"></h3>
+                                <p class="card__text" data-i18n="about.axes.a2.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="cube"></span>
+                                <h3 class="card__title" data-i18n="about.axes.a3.title"></h3>
+                                <p class="card__text" data-i18n="about.axes.a3.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="ai"></span>
+                                <h3 class="card__title" data-i18n="about.axes.a4.title"></h3>
+                                <p class="card__text" data-i18n="about.axes.a4.text"></p>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="view" data-view="team" data-title="team.title" hidden>
+                <div class="page-header">
+                    <div class="container">
+                        <p class="eyebrow" data-i18n="team.eyebrow"></p>
+                        <h1 class="page-header__title" data-i18n="team.pageTitle"></h1>
+                        <p class="page-header__lead" data-i18n="team.lead"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <section class="section">
+                        <div class="section__head">
+                            <h2 class="section__title" data-i18n="team.headTitle"></h2>
+                        </div>
+                        <article class="surface person reveal">
+                            <span class="avatar" aria-hidden="true">AM</span>
+                            <div>
+                                <h3 class="person__name" data-i18n="team.headName"></h3>
+                                <p class="person__role" data-i18n="team.headRole"></p>
+                                <p class="person__meta" data-i18n="team.headOrg"></p>
+                                <p class="person__meta" data-i18n="team.headExtra"></p>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="section">
+                        <div class="section__head">
+                            <h2 class="section__title" data-i18n="team.researchersTitle"></h2>
+                        </div>
+                        <div data-list="researchers"></div>
+                    </section>
+
+                    <section class="section">
+                        <div class="section__head">
+                            <h2 class="section__title" data-i18n="team.studentsTitle"></h2>
+                        </div>
+                        <div data-list="students"></div>
+                    </section>
+
+                    <section class="section reveal">
+                        <div class="cta-band">
+                            <div>
+                                <h2 data-i18n="team.joinTitle"></h2>
+                                <p data-i18n="team.joinText"></p>
+                            </div>
+                            <a class="btn" href="#contact" data-i18n="nav.contact"></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="view" data-view="research" data-title="research.title" hidden>
+                <div class="page-header">
+                    <div class="container">
+                        <p class="eyebrow" data-i18n="research.eyebrow"></p>
+                        <h1 class="page-header__title" data-i18n="research.pageTitle"></h1>
+                        <p class="page-header__lead" data-i18n="research.lead"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <section class="section">
+                        <div class="grid" style="--col-min: 22rem">
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="scan"></span>
+                                <span class="tag" data-i18n="research.status"></span>
+                                <h2 class="card__title" data-i18n="research.p1.title"></h2>
+                                <p class="card__text" data-i18n="research.p1.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="cube"></span>
+                                <span class="tag" data-i18n="research.status"></span>
+                                <h2 class="card__title" data-i18n="research.p2.title"></h2>
+                                <p class="card__text" data-i18n="research.p2.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="microscope"></span>
+                                <span class="tag" data-i18n="research.status"></span>
+                                <h2 class="card__title" data-i18n="research.p3.title"></h2>
+                                <p class="card__text" data-i18n="research.p3.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="card__icon" data-icon="ultrasound"></span>
+                                <span class="tag" data-i18n="research.status"></span>
+                                <h2 class="card__title" data-i18n="research.p4.title"></h2>
+                                <p class="card__text" data-i18n="research.p4.text"></p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="section reveal">
+                        <div class="cta-band">
+                            <div>
+                                <h2 data-i18n="research.moreTitle"></h2>
+                                <p data-i18n="research.moreText"></p>
+                            </div>
+                            <a class="btn" href="#contact" data-i18n="nav.contact"></a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="view" data-view="partners" data-title="partners.title" hidden>
+                <div class="page-header">
+                    <div class="container">
+                        <p class="eyebrow" data-i18n="partners.eyebrow"></p>
+                        <h1 class="page-header__title" data-i18n="partners.pageTitle"></h1>
+                        <p class="page-header__lead" data-i18n="partners.lead"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <section class="section">
+                        <div class="grid" style="--col-min: 17rem">
+                            <article class="card reveal">
+                                <span class="partner__flag" aria-hidden="true">🇨🇦</span>
+                                <span class="tag" data-i18n="partners.p1.country"></span>
+                                <h2 class="card__title" data-i18n="partners.p1.name"></h2>
+                                <p class="card__text" data-i18n="partners.p1.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="partner__flag" aria-hidden="true">🇺🇸</span>
+                                <span class="tag" data-i18n="partners.p2.country"></span>
+                                <h2 class="card__title" data-i18n="partners.p2.name"></h2>
+                                <p class="card__text" data-i18n="partners.p2.text"></p>
+                            </article>
+                            <article class="card reveal">
+                                <span class="partner__flag" aria-hidden="true">🇪🇸</span>
+                                <span class="tag" data-i18n="partners.p3.country"></span>
+                                <h2 class="card__title" data-i18n="partners.p3.name"></h2>
+                                <p class="card__text" data-i18n="partners.p3.text"></p>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="view" data-view="contact" data-title="contact.title" hidden>
+                <div class="page-header">
+                    <div class="container">
+                        <p class="eyebrow" data-i18n="contact.eyebrow"></p>
+                        <h1 class="page-header__title" data-i18n="contact.pageTitle"></h1>
+                        <p class="page-header__lead" data-i18n="contact.lead"></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <section class="section">
+                        <div class="surface reveal contact-card">
+                            <h2 class="section__title" data-i18n="contact.addressTitle"></h2>
+                            <div class="contact-item">
+                                <span class="card__icon" data-icon="building"></span>
+                                <div>
+                                    <span class="contact-item__value" data-i18n="contact.unit"></span><br />
+                                    <span data-i18n="contact.faculty"></span><br />
+                                    <span data-i18n="contact.university"></span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="card__icon" data-icon="mail"></span>
+                                <div>
+                                    <span class="contact-item__label" data-i18n="contact.email"></span>
+                                    <span class="contact-item__value" data-config="contact.email" data-config-type="mailto"></span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="card__icon" data-icon="phone"></span>
+                                <div>
+                                    <span class="contact-item__label" data-i18n="contact.phone"></span>
+                                    <span class="contact-item__value" data-config="contact.phone" data-config-type="tel"></span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="card__icon" data-icon="pin"></span>
+                                <div>
+                                    <span class="contact-item__label" data-i18n="contact.address"></span>
+                                    <span class="contact-item__value" data-config="contact.address"></span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="card__icon" data-icon="link"></span>
+                                <div>
+                                    <span class="contact-item__label" data-i18n="contact.follow"></span>
+                                    <div data-list="social"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </main>
 

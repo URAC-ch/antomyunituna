@@ -10,27 +10,12 @@
     var LANG_KEY = 'urac_lang';
     var THEME_KEY = 'urac_theme';
 
-    var NAV = [
-        { key: 'home', href: 'index.html' },
-        { key: 'about', href: 'about.html' },
-        { key: 'team', href: 'team.html' },
-        { key: 'research', href: 'research.html' },
-        { key: 'publications', href: 'publications.html' },
-        { key: 'partners', href: 'partners.html' },
-        {
-            key: 'more',
-            children: [
-                { key: 'teaching', href: 'teaching.html' },
-                { key: 'news', href: 'news.html' },
-                { key: 'resources', href: 'resources.html' },
-            ],
-        },
-        { key: 'contact', href: 'contact.html' },
-    ];
+    // Chaque entrée correspond à une vue de index.html (<div class="view" data-view="...">)
+    var NAV = ['home', 'about', 'team', 'research', 'partners', 'contact'];
 
     var FOOTER = [
         { key: 'unit', links: ['about', 'team', 'partners'] },
-        { key: 'activities', links: ['research', 'publications', 'teaching', 'news', 'resources'] },
+        { key: 'activities', links: ['research'] },
         { key: 'connect', links: ['contact'] },
     ];
 
@@ -141,37 +126,21 @@
 
     /* ---------- Header & footer ---------- */
 
-    var page = document.body.getAttribute('data-page') || '';
+    function currentView() {
+        var key = window.location.hash.replace('#', '');
+        return NAV.indexOf(key) === -1 ? 'home' : key;
+    }
 
-    function navLink(item, cls) {
-        var current = item.key === page ? ' aria-current="page"' : '';
-        return '<a class="' + cls + '" href="' + item.href + '"' + current + '>' + t('nav.' + item.key) + '</a>';
+    var page = currentView();
+
+    function navLink(key, cls) {
+        var current = key === page ? ' aria-current="page"' : '';
+        return '<a class="' + cls + '" href="#' + key + '"' + current + '>' + t('nav.' + key) + '</a>';
     }
 
     function renderHeader() {
-        var items = NAV.map(function (item) {
-            if (item.children) {
-                var active = item.children.some(function (c) {
-                    return c.key === page;
-                });
-                return (
-                    '<li class="dropdown">' +
-                    '<button type="button" class="nav-link" data-menu="more" aria-expanded="false"' +
-                    (active ? ' aria-current="page"' : '') +
-                    '>' +
-                    t('nav.' + item.key) +
-                    icon('chevron', ' stroke-width="2"') +
-                    '</button>' +
-                    '<ul class="menu menu--left" id="menu-more">' +
-                    item.children
-                        .map(function (c) {
-                            return '<li>' + navLink(c, 'menu__item') + '</li>';
-                        })
-                        .join('') +
-                    '</ul></li>'
-                );
-            }
-            return '<li>' + navLink(item, 'nav-link') + '</li>';
+        var items = NAV.map(function (key) {
+            return '<li>' + navLink(key, 'nav-link') + '</li>';
         }).join('');
 
         var langItems = LANGS.map(function (l) {
@@ -197,7 +166,7 @@
         return (
             '<a class="skip-link" href="#main">' + t('nav.skip') + '</a>' +
             '<header class="app-navbar"><div class="container app-navbar__inner">' +
-            '<a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="44" height="44">' +
+            '<a class="brand" href="#home"><img src="assets/img/logo.svg" alt="" width="44" height="44">' +
             '<span class="brand__wordmark"><span>URAC</span><span>' + t('meta.long') + '</span></span></a>' +
             '<nav class="app-navbar__collapse" id="primary-nav" data-open="false" aria-label="Menu"><div>' +
             '<ul class="app-navbar__nav">' + items + '</ul></div></nav>' +
@@ -213,25 +182,13 @@
         );
     }
 
-    function findNav(key) {
-        var found = null;
-        NAV.forEach(function (item) {
-            if (item.key === key) found = item;
-            (item.children || []).forEach(function (c) {
-                if (c.key === key) found = c;
-            });
-        });
-        return found;
-    }
-
     function renderFooter() {
         var cols = FOOTER.map(function (section) {
             return (
                 '<div><h2 class="site-footer__heading">' + t('footer.' + section.key) + '</h2><ul class="site-footer__nav">' +
                 section.links
                     .map(function (k) {
-                        var item = findNav(k);
-                        return '<li><a href="' + item.href + '">' + t('nav.' + k) + '</a></li>';
+                        return '<li><a href="#' + k + '">' + t('nav.' + k) + '</a></li>';
                     })
                     .join('') +
                 (section.key === 'connect' && CONFIG.contact && CONFIG.contact.email
@@ -244,7 +201,7 @@
         return (
             '<footer class="site-footer"><div class="container">' +
             '<div class="site-footer__inner"><div>' +
-            '<a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="48" height="48">' +
+            '<a class="brand" href="#home"><img src="assets/img/logo.svg" alt="" width="48" height="48">' +
             '<span class="brand__wordmark"><span>URAC</span><span>' + t('meta.long') + '</span></span></a>' +
             '<p class="site-footer__tagline">' + t('footer.tagline') + '</p></div>' +
             '<nav aria-label="Footer"><div class="site-footer__columns">' + cols + '</div></nav></div>' +
@@ -289,42 +246,6 @@
                 .join('') +
             '</div>'
         );
-    }
-
-    function renderPublications(list) {
-        if (!list || !list.length) {
-            return '<p class="callout">' + t('publications.empty') + '</p>';
-        }
-        var sorted = list.slice().sort(function (a, b) {
-            return (b.year || 0) - (a.year || 0);
-        });
-        var html = '';
-        var lastYear = null;
-        sorted.forEach(function (p) {
-            if (p.year !== lastYear) {
-                if (lastYear !== null) html += '</ol>';
-                html += '<h2 class="section__title" style="margin-top:var(--space-6)">' + escapeHtml(p.year || '') + '</h2><ol class="timeline">';
-                lastYear = p.year;
-            }
-            var title = escapeHtml(p.title || '');
-            if (p.url) title = '<a href="' + escapeHtml(p.url) + '" target="_blank" rel="noopener">' + title + '</a>';
-            html +=
-                '<li class="timeline__item"><h3>' + title + '</h3><p>' + escapeHtml(p.authors || '') +
-                (p.venue ? ' — <em>' + escapeHtml(p.venue) + '</em>' : '') + '</p></li>';
-        });
-        return html + '</ol>';
-    }
-
-    function renderNews(list) {
-        return (list || [])
-            .map(function (n) {
-                return (
-                    '<li class="timeline__item"><span class="tag">' + escapeHtml(localized(n.date)) + '</span>' +
-                    '<h3 style="margin-top:var(--space-3)">' + escapeHtml(localized(n.title)) + '</h3>' +
-                    '<p>' + escapeHtml(localized(n.text)) + '</p></li>'
-                );
-            })
-            .join('');
     }
 
     function renderSocial() {
@@ -379,23 +300,10 @@
             else el.textContent = v;
         });
 
-        document.querySelectorAll('[data-link]').forEach(function (el) {
-            var url = (CONFIG.links || {})[el.getAttribute('data-link')];
-            if (url) {
-                el.setAttribute('href', url);
-                el.setAttribute('target', '_blank');
-                el.setAttribute('rel', 'noopener');
-            } else {
-                el.removeAttribute('href');
-                el.classList.add('card--static');
-            }
-        });
 
         var lists = {
             researchers: function () { return renderMembers(CONFIG.researchers, 'team.researchersEmpty'); },
             students: function () { return renderMembers(CONFIG.students, 'team.studentsEmpty'); },
-            publications: function () { return renderPublications(CONFIG.publications); },
-            'news-extra': function () { return renderNews(CONFIG.news); },
             social: renderSocial,
         };
         document.querySelectorAll('[data-list]').forEach(function (el) {
@@ -403,8 +311,25 @@
             if (fn) el.innerHTML = fn();
         });
 
-        var titleKey = document.body.getAttribute('data-title');
-        document.title = (titleKey ? t(titleKey) + ' · ' : '') + t('meta.siteName');
+        updateTitle();
+    }
+
+    /* ---------- Views (navigation sans rechargement) ---------- */
+
+    function updateTitle() {
+        document.title = (page === 'home' ? '' : t(page + '.title') + ' · ') + t('meta.siteName');
+    }
+
+    function showView() {
+        page = currentView();
+        document.querySelectorAll('.view').forEach(function (el) {
+            el.hidden = el.getAttribute('data-view') !== page;
+        });
+        document.querySelectorAll('.nav-link').forEach(function (a) {
+            if (a.getAttribute('href') === '#' + page) a.setAttribute('aria-current', 'page');
+            else a.removeAttribute('aria-current');
+        });
+        updateTitle();
     }
 
     /* ---------- Interactions ---------- */
@@ -490,27 +415,6 @@
         nav.setAttribute('data-open', String(open));
     }
 
-    function bindContactForm() {
-        var form = document.getElementById('contact-form');
-        if (!form || form.dataset.bound) return;
-        form.dataset.bound = 'true';
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            var note = document.getElementById('form-note');
-            var to = CONFIG.contact && CONFIG.contact.email;
-            if (!to) {
-                note.textContent = t('contact.formNoEmail');
-                return;
-            }
-            var data = new FormData(form);
-            var body = data.get('message') + '\n\n— ' + data.get('name') + ' <' + data.get('email') + '>';
-            window.location.href =
-                'mailto:' + encodeURIComponent(to) +
-                '?subject=' + encodeURIComponent('[URAC] ' + data.get('subject')) +
-                '&body=' + encodeURIComponent(body);
-        });
-    }
-
     function initReveal() {
         var els = document.querySelectorAll('.reveal');
         if (!('IntersectionObserver' in window)) {
@@ -536,8 +440,15 @@
         document.getElementById('site-footer').innerHTML = renderFooter();
         applyI18n();
         bindHeader();
-        bindContactForm();
+        showView();
     }
+
+    window.addEventListener('hashchange', function () {
+        // Ignore les ancres internes (ex. lien d'évitement #main)
+        if (NAV.indexOf(window.location.hash.replace('#', '')) === -1) return;
+        showView();
+        window.scrollTo(0, 0);
+    });
 
     render();
     initReveal();
