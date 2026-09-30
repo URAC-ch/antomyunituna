@@ -1,53 +1,33 @@
 # URAC — Unité de Recherche en Anatomie Clinique
 
-Site web de l'Unité de Recherche en Anatomie Clinique (URAC), Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS), Université de Nouakchott Al Aasriya, Mauritanie.
+Site web officiel de l'**Unité de Recherche en Anatomie Clinique (URAC)**, rattachée à la Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS) de l'Université de Nouakchott Al Aasriya, Mauritanie.
 
-- **Bilingue** : français / anglais (sélecteur 🌐 dans la barre de navigation, ou `?lang=en` dans l'URL)
-- **Responsive** : mobile, tablette, ordinateur
-- **Mode clair / sombre**
-- **Statique** : HTML, CSS et JavaScript, sans dépendance ni étape de build
+🌐 **Site :** https://urac-ch.github.io/antomyunituna/
 
-## Pages
+## À propos de l'URAC
 
-| Fichier | Contenu |
-| --- | --- |
-| `index.html` | Accueil |
-| `about.html` | À propos (mission, objectifs, axes de recherche) |
-| `team.html` | Équipe |
-| `research.html` | Recherches et projets |
-| `publications.html` | Publications |
-| `partners.html` | Partenariats et collaborations |
-| `teaching.html` | Formation et enseignement |
-| `news.html` | Actualités / événements |
-| `resources.html` | Ressources |
-| `contact.html` | Contact |
+L'URAC rassemble des chercheurs, enseignants et étudiants engagés dans l'étude et l'enseignement de l'anatomie clinique, à la croisée de la pratique médicale, de l'imagerie médicale et des technologies numériques appliquées à la santé.
 
-## Modifier le contenu
+### Axes de recherche
 
-- **Textes (FR et EN)** : `assets/js/i18n.js` — chaque texte existe en `fr` et en `en`.
-- **Coordonnées, réseaux sociaux, liens, membres de l'équipe, publications, actualités** : `assets/js/config.js`.
-  Les champs laissés vides s'affichent « À compléter » (ou sont masqués).
-- **Styles / couleurs** : `assets/css/style.css` (variables en haut du fichier).
-- **Logo** : `assets/img/logo.svg`.
+- Anatomie clinique et chirurgicale
+- Imagerie médicale et segmentation assistée par IA
+- Apprentissage interactif de l'anatomie en 3D
+- IA en santé et contextes à ressources limitées
 
-Exemple d'ajout d'une publication dans `config.js` :
+### Partenaires
 
-```js
-publications: [
-    { year: 2025, authors: 'A. Moulaye Idriss, et al.', title: 'Titre de l’article', venue: 'Nom de la revue', url: 'https://doi.org/...' },
-],
-```
+- Queen's University — Canada
+- Harvard — Brigham and Women's Hospital — États-Unis
+- Université de Las Palmas de Gran Canaria — Espagne
 
-## Aperçu en local
+## Contenu du site
 
-```bash
-python3 -m http.server 8000
-# puis ouvrir http://localhost:8000
-```
+- Accueil
+- À propos : mission, objectifs, axes de recherche
+- Équipe
+- Recherche : projets en cours
+- Partenariats
+- Contact
 
-## Déploiement sur GitHub Pages
-
-Le workflow `.github/workflows/pages.yml` publie le site à chaque push sur `main`.
-
-1. Dans le dépôt GitHub : **Settings → Pages → Build and deployment → Source : GitHub Actions**.
-2. Fusionner les changements dans `main` : le site est publié sur `https://<utilisateur>.github.io/<dépôt>/`.
+Le site est disponible en **français** et en **anglais**, en mode clair ou sombre, sur mobile, tablette et ordinateur.

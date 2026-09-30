@@ -529,11 +529,6 @@ button {
     display: block;
 }
 
-.menu--left {
-    right: auto;
-    left: 0;
-    min-width: 15rem;
-}
 
 @keyframes menu-in {
     from { opacity: 0; transform: translateY(-6px); }
@@ -641,14 +636,6 @@ button {
 
     .nav-link[aria-current='page'] {
         background-color: var(--color-primary-soft);
-    }
-
-    .menu--left {
-        position: static;
-        min-width: 0;
-        margin: var(--space-1) 0 0 var(--space-4);
-        box-shadow: none;
-        animation: none;
     }
 }
 
@@ -982,37 +969,10 @@ a.card:hover,
     font-weight: 800;
 }
 
-.timeline {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+/* Vues (navigation sans rechargement) */
 
-.timeline__item {
-    margin: 0 0 var(--space-4);
-    padding: var(--space-5);
-    border: 1px solid var(--color-border);
-    border-inline-start: 3px solid var(--color-primary);
-    border-radius: var(--radius-md);
-    background-color: var(--color-surface);
-    box-shadow: var(--shadow-xs);
-    transition: box-shadow var(--base) var(--ease-out);
-}
-
-.timeline__item:hover {
-    box-shadow: var(--shadow-md);
-}
-
-.timeline__item:last-child {
-    margin-bottom: 0;
-}
-
-.timeline__item h3 {
-    margin-bottom: var(--space-2);
-}
-
-.timeline__item p {
-    color: var(--color-text-muted);
+.view[hidden] {
+    display: none;
 }
 
 .callout {
@@ -1158,58 +1118,8 @@ a.card:hover,
     overflow-wrap: anywhere;
 }
 
-.form {
-    display: grid;
-    gap: var(--space-4);
-}
-
-.form__row {
-    display: grid;
-    gap: var(--space-4);
-    grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
-}
-
-.field {
-    display: grid;
-    gap: var(--space-1);
-}
-
-.field label {
-    color: var(--color-heading);
-    font-size: var(--text-sm);
-    font-weight: 600;
-}
-
-.field input,
-.field textarea {
-    width: 100%;
-    padding: var(--space-3) var(--space-4);
-    border: 1px solid var(--color-border-strong);
-    border-radius: var(--radius-sm);
-    background-color: var(--color-bg);
-    transition: border-color var(--fast) var(--ease-out), box-shadow var(--fast) var(--ease-out);
-}
-
-.field input:focus,
-.field textarea:focus {
-    border-color: var(--color-primary);
-    outline: none;
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
-}
-
-.field textarea {
-    min-height: 9rem;
-    resize: vertical;
-}
-
-.form__note {
-    margin: 0;
-    color: var(--color-text-subtle);
-    font-size: var(--text-sm);
-}
-
-.form .btn {
-    justify-self: start;
+.contact-card {
+    max-width: 44rem;
 }
 
 /* 404 */
