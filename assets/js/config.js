@@ -12,8 +12,8 @@ window.URAC_CONFIG = {
         email: 'amdriss6@gmail.com',
         phone: '+222 36 64 71 73',
         address: {
-            fr: 'N°45 ZRB Nord, Tevragh Zeina, BP 4424, Nouakchott, Mauritanie',
-            en: 'No. 45 ZRB Nord, Tevragh Zeina, P.O. Box 4424, Nouakchott, Mauritania',
+            fr: 'Nouakchott, Mauritanie',
+            en: 'Nouakchott, Mauritania',
         },
     },
 
