@@ -24,12 +24,12 @@ window.URAC_I18N = {
         },
         footer: {
             tagline:
-                "Unité de recherche de la Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS), Université de Nouakchott Al Aasriya, Mauritanie.",
+                "Unité de recherche de la Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS), Université de Nouakchott, Mauritanie.",
             unit: "L'unité",
             activities: 'Activités',
             connect: 'Contact',
-            rights: 'Unité de Recherche en Anatomie Clinique (URAC) — Université de Nouakchott Al Aasriya',
-            fmpos: 'FMPOS, Université de Nouakchott Al Aasriya',
+            rights: 'Unité de Recherche en Anatomie Clinique (URAC) — Université de Nouakchott',
+            fmpos: 'FMPOS, Université de Nouakchott',
         },
         common: {
             toComplete: 'À compléter',
@@ -38,10 +38,10 @@ window.URAC_I18N = {
         },
         home: {
             title: 'Accueil',
-            eyebrow: 'FMPOS · Université de Nouakchott Al Aasriya · Mauritanie',
+            eyebrow: 'FMPOS · Université de Nouakchott · Mauritanie',
             heroTitle: 'Unité de Recherche en <span>Anatomie Clinique</span>',
             heroLead:
-                "Bienvenue sur le site de l'Unité de Recherche en Anatomie Clinique (URAC), rattachée à la Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS) de l'Université de Nouakchott Al Aasriya, Mauritanie.",
+                "Bienvenue sur le site de l'Unité de Recherche en Anatomie Clinique (URAC), rattachée à la Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS) de l'Université de Nouakchott, Mauritanie.",
             heroLead2:
                 "Notre unité rassemble des chercheurs, enseignants et étudiants engagés dans l'étude et l'enseignement de l'anatomie clinique, à la croisée de la pratique médicale, de l'imagerie médicale et des technologies numériques appliquées à la santé.",
             ctaProjects: 'Découvrir nos projets',
@@ -111,7 +111,7 @@ window.URAC_I18N = {
             headTitle: "Responsable de l'unité",
             headName: 'Pr Ahmedou Moulaye Idriss',
             headRole: 'Anatomiste et Chirurgien Général',
-            headOrg: 'Université de Nouakchott Al Aasriya (FMPOS)',
+            headOrg: 'Université de Nouakchott (FMPOS)',
             headExtra: "Président de l'Association Mauritanienne d'Anatomie Clinique",
             headBio: 'Courte biographie : parcours, domaines d’expertise, publications marquantes — à compléter.',
             researchersTitle: 'Chercheurs et collaborateurs',
@@ -177,7 +177,7 @@ window.URAC_I18N = {
             addressTitle: 'Coordonnées',
             unit: 'Unité de Recherche en Anatomie Clinique (URAC)',
             faculty: "Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS)",
-            university: 'Université de Nouakchott Al Aasriya, Mauritanie',
+            university: 'Université de Nouakchott, Mauritanie',
             email: 'Email',
             phone: 'Téléphone',
             address: 'Adresse',
@@ -209,12 +209,12 @@ window.URAC_I18N = {
         },
         footer: {
             tagline:
-                'Research unit of the Faculty of Medicine, Pharmacy and Dental Surgery (FMPOS), University of Nouakchott Al Aasriya, Mauritania.',
+                'Research unit of the Faculty of Medicine, Pharmacy and Dental Surgery (FMPOS), University of Nouakchott, Mauritania.',
             unit: 'The unit',
             activities: 'Activities',
             connect: 'Contact',
-            rights: 'Clinical Anatomy Research Unit (URAC) — University of Nouakchott Al Aasriya',
-            fmpos: 'FMPOS, University of Nouakchott Al Aasriya',
+            rights: 'Clinical Anatomy Research Unit (URAC) — University of Nouakchott',
+            fmpos: 'FMPOS, University of Nouakchott',
         },
         common: {
             toComplete: 'To be completed',
@@ -223,10 +223,10 @@ window.URAC_I18N = {
         },
         home: {
             title: 'Home',
-            eyebrow: 'FMPOS · University of Nouakchott Al Aasriya · Mauritania',
+            eyebrow: 'FMPOS · University of Nouakchott · Mauritania',
             heroTitle: '<span>Clinical Anatomy</span> Research Unit',
             heroLead:
-                'Welcome to the website of the Clinical Anatomy Research Unit (URAC), affiliated with the Faculty of Medicine, Pharmacy and Dental Surgery (FMPOS) at the University of Nouakchott Al Aasriya, Mauritania.',
+                'Welcome to the website of the Clinical Anatomy Research Unit (URAC), affiliated with the Faculty of Medicine, Pharmacy and Dental Surgery (FMPOS) at the University of Nouakchott, Mauritania.',
             heroLead2:
                 'Our unit brings together researchers, faculty, and students committed to the study and teaching of clinical anatomy, at the intersection of medical practice, medical imaging, and digital technologies applied to healthcare.',
             ctaProjects: 'Discover our projects',
@@ -294,7 +294,7 @@ window.URAC_I18N = {
             headTitle: 'Head of the Unit',
             headName: 'Prof. Ahmedou Moulaye Idriss',
             headRole: 'Anatomist and General Surgeon',
-            headOrg: 'University of Nouakchott Al Aasriya (FMPOS)',
+            headOrg: 'University of Nouakchott (FMPOS)',
             headExtra: 'President of the Mauritanian Association of Clinical Anatomy',
             headBio: 'Short bio: background, areas of expertise, notable publications — to be completed.',
             researchersTitle: 'Researchers and collaborators',
@@ -359,7 +359,7 @@ window.URAC_I18N = {
             addressTitle: 'Contact details',
             unit: 'Clinical Anatomy Research Unit (URAC)',
             faculty: 'Faculty of Medicine, Pharmacy and Dental Surgery (FMPOS)',
-            university: 'University of Nouakchott Al Aasriya, Mauritania',
+            university: 'University of Nouakchott, Mauritania',
             email: 'Email',
             phone: 'Phone',
             address: 'Address',

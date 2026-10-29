@@ -1,6 +1,6 @@
 # URAC — Unité de Recherche en Anatomie Clinique
 
-Site web officiel de l'**Unité de Recherche en Anatomie Clinique (URAC)**, rattachée à la Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS) de l'Université de Nouakchott Al Aasriya, Mauritanie.
+Site web officiel de l'**Unité de Recherche en Anatomie Clinique (URAC)**, rattachée à la Faculté de Médecine, de Pharmacie et d'Odonto-Stomatologie (FMPOS) de l'Université de Nouakchott, Mauritanie.
 
 🌐 **Site :** https://urac-ch.github.io/antomyunituna/
 
