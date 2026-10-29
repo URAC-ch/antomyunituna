@@ -166,7 +166,7 @@
         return (
             '<a class="skip-link" href="#main">' + t('nav.skip') + '</a>' +
             '<header class="app-navbar"><div class="container app-navbar__inner">' +
-            '<a class="brand" href="#home"><img src="assets/img/logo.svg" alt="" width="44" height="44">' +
+            '<a class="brand" href="#home"><img src="assets/img/logo.png" alt="" width="44" height="44">' +
             '<span class="brand__wordmark"><span>URAC</span><span>' + t('meta.long') + '</span></span></a>' +
             '<nav class="app-navbar__collapse" id="primary-nav" data-open="false" aria-label="Menu"><div>' +
             '<ul class="app-navbar__nav">' + items + '</ul></div></nav>' +
@@ -201,7 +201,7 @@
         return (
             '<footer class="site-footer"><div class="container">' +
             '<div class="site-footer__inner"><div>' +
-            '<a class="brand" href="#home"><img src="assets/img/logo.svg" alt="" width="48" height="48">' +
+            '<a class="brand" href="#home"><img src="assets/img/logo.png" alt="" width="48" height="48">' +
             '<span class="brand__wordmark"><span>URAC</span><span>' + t('meta.long') + '</span></span></a>' +
             '<p class="site-footer__tagline">' + t('footer.tagline') + '</p></div>' +
             '<nav aria-label="Footer"><div class="site-footer__columns">' + cols + '</div></nav></div>' +
