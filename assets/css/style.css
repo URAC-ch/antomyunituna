@@ -4,48 +4,50 @@
    ========================================================================== */
 
 :root {
-    --navy-950: #021a33;
-    --navy-900: #032a52;
-    --navy-800: #0a3a6b;
-    --blue-700: #0b4f9c;
-    --blue-600: #0d63c2;
-    --blue-300: #8cc3ff;
-    --blue-200: #bcdcff;
-    --blue-50: #eef6ff;
-    --teal-500: #0fa3a3;
-    --teal-400: #2fc4c0;
+    --green-950: #04200f;
+    --green-900: #08341a;
+    --green-800: #0d4824;
+    --green-700: #116a32;
+    --green-600: #15803c;
+    --green-300: #86d9a0;
+    --green-200: #b9ebc7;
+    --green-50: #ecf8ef;
+    --red-600: #c8202b;
+    --red-400: #f0646a;
+    --gold-400: #f6d70f;
     --coral-500: #d9534f;
 
     color-scheme: light;
 
-    --color-bg: #f7f9fc;
-    --color-bg-subtle: #eef2f7;
+    --color-bg: #f7faf8;
+    --color-bg-subtle: #eef4f0;
     --color-surface: #ffffff;
     --color-surface-raised: #ffffff;
-    --color-border: rgb(10 30 60 / 10%);
-    --color-border-strong: rgb(10 30 60 / 18%);
-    --color-text: #25384d;
-    --color-text-muted: #52667c;
-    --color-text-subtle: #6b7c90;
-    --color-heading: var(--navy-900);
-    --color-primary: var(--blue-600);
-    --color-primary-hover: var(--blue-700);
+    --color-border: rgb(10 40 20 / 10%);
+    --color-border-strong: rgb(10 40 20 / 18%);
+    --color-text: #24362c;
+    --color-text-muted: #51655a;
+    --color-text-subtle: #697b71;
+    --color-heading: var(--green-900);
+    --color-primary: var(--green-600);
+    --color-primary-hover: var(--green-700);
     --color-primary-contrast: #ffffff;
-    --color-primary-soft: var(--blue-50);
-    --color-primary-soft-border: rgb(13 99 194 / 24%);
-    --color-accent: var(--teal-500);
-    --color-focus: #3b8bf6;
-    --color-band: var(--navy-900);
-    --color-band-2: var(--blue-700);
+    --color-primary-soft: var(--green-50);
+    --color-primary-soft-border: rgb(21 128 60 / 24%);
+    --color-accent: var(--red-600);
+    --color-focus: #22a04a;
+    --color-highlight: var(--gold-400);
+    --color-band: var(--green-900);
+    --color-band-2: var(--green-700);
     --color-band-text: rgb(255 255 255 / 94%);
     --color-band-text-muted: rgb(255 255 255 / 70%);
-    --color-grid-line: rgb(13 99 194 / 7%);
+    --color-grid-line: rgb(21 128 60 / 7%);
     --color-placeholder: #9a6a00;
 
-    --shadow-xs: 0 1px 2px rgb(10 30 60 / 5%);
-    --shadow-sm: 0 1px 3px rgb(10 30 60 / 7%), 0 1px 2px rgb(10 30 60 / 4%);
-    --shadow-md: 0 6px 16px rgb(10 30 60 / 9%), 0 2px 4px rgb(10 30 60 / 4%);
-    --shadow-lg: 0 16px 36px rgb(10 30 60 / 13%), 0 4px 8px rgb(10 30 60 / 5%);
+    --shadow-xs: 0 1px 2px rgb(10 40 20 / 5%);
+    --shadow-sm: 0 1px 3px rgb(10 40 20 / 7%), 0 1px 2px rgb(10 40 20 / 4%);
+    --shadow-md: 0 6px 16px rgb(10 40 20 / 9%), 0 2px 4px rgb(10 40 20 / 4%);
+    --shadow-lg: 0 16px 36px rgb(10 40 20 / 13%), 0 4px 8px rgb(10 40 20 / 5%);
 
     --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, 'Noto Sans', sans-serif;
 
@@ -88,25 +90,25 @@
 :root[data-theme='dark'] {
     color-scheme: dark;
 
-    --color-bg: #07111f;
-    --color-bg-subtle: #0c1a2d;
-    --color-surface: #101f35;
-    --color-surface-raised: #15263f;
-    --color-border: rgb(148 170 200 / 17%);
-    --color-border-strong: rgb(148 170 200 / 30%);
-    --color-text: #dbe6f3;
-    --color-text-muted: #a2b4c9;
-    --color-text-subtle: #8b9db3;
-    --color-heading: #eef4fb;
-    --color-primary: var(--blue-300);
-    --color-primary-hover: var(--blue-200);
-    --color-primary-contrast: var(--navy-950);
-    --color-primary-soft: rgb(140 195 255 / 12%);
-    --color-primary-soft-border: rgb(140 195 255 / 30%);
-    --color-accent: var(--teal-400);
-    --color-band: #050d18;
-    --color-band-2: #0b2a4d;
-    --color-grid-line: rgb(140 195 255 / 7%);
+    --color-bg: #07130c;
+    --color-bg-subtle: #0c1d13;
+    --color-surface: #11251a;
+    --color-surface-raised: #162d20;
+    --color-border: rgb(150 190 165 / 17%);
+    --color-border-strong: rgb(150 190 165 / 30%);
+    --color-text: #dcebe1;
+    --color-text-muted: #a5bbad;
+    --color-text-subtle: #8da496;
+    --color-heading: #eff7f1;
+    --color-primary: var(--green-300);
+    --color-primary-hover: var(--green-200);
+    --color-primary-contrast: var(--green-950);
+    --color-primary-soft: rgb(134 217 160 / 12%);
+    --color-primary-soft-border: rgb(134 217 160 / 30%);
+    --color-accent: var(--red-400);
+    --color-band: #04100a;
+    --color-band-2: #0d3a20;
+    --color-grid-line: rgb(134 217 160 / 7%);
     --color-placeholder: #f2c14e;
 
     --shadow-xs: 0 1px 2px rgb(0 0 0 / 40%);
@@ -718,7 +720,7 @@ button {
     padding-block: clamp(2rem, 1.4rem + 3vw, 4rem) var(--section-gap);
     background:
         radial-gradient(70rem 32rem at 12% -10%, color-mix(in srgb, var(--color-primary) 14%, transparent), transparent 68%),
-        radial-gradient(55rem 26rem at 92% 8%, color-mix(in srgb, var(--color-accent) 13%, transparent), transparent 66%);
+        radial-gradient(55rem 26rem at 92% 8%, color-mix(in srgb, var(--color-highlight) 16%, transparent), transparent 66%);
 }
 
 .hero__title {
@@ -757,8 +759,9 @@ button {
 
 .hero-panel__art {
     width: 100%;
-    max-width: 340px;
+    max-width: 220px;
     margin: 0 auto var(--space-5);
+    filter: drop-shadow(0 8px 18px rgb(10 40 20 / 22%));
 }
 
 .hero-panel__list {
@@ -993,7 +996,7 @@ a.card:hover,
     padding: clamp(1.75rem, 1.3rem + 2vw, 3rem);
     border-radius: var(--radius-xl);
     background:
-        radial-gradient(40rem 20rem at 90% 120%, rgb(47 196 192 / 30%), transparent 70%),
+        radial-gradient(40rem 20rem at 90% 120%, color-mix(in srgb, var(--color-highlight) 22%, transparent), transparent 70%),
         linear-gradient(135deg, var(--color-band) 0%, var(--color-band-2) 100%);
     color: var(--color-band-text);
 }
@@ -1012,12 +1015,12 @@ a.card:hover,
 
 .cta-band .btn {
     background-color: #fff;
-    color: var(--navy-900);
+    color: var(--green-900);
 }
 
 .cta-band .btn:hover {
-    background-color: var(--blue-50);
-    color: var(--navy-900);
+    background-color: var(--green-50);
+    color: var(--green-900);
 }
 
 /* Team */
@@ -1145,7 +1148,7 @@ a.card:hover,
 .site-footer {
     margin-top: auto;
     background:
-        radial-gradient(50rem 20rem at 85% -20%, rgb(47 196 192 / 18%), transparent 70%),
+        radial-gradient(50rem 20rem at 85% -20%, color-mix(in srgb, var(--color-highlight) 14%, transparent), transparent 70%),
         linear-gradient(135deg, var(--color-band) 0%, var(--color-band-2) 140%);
     color: var(--color-band-text);
 }
