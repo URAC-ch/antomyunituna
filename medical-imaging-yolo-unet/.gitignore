@@ -1,0 +1,10 @@
+data/
+runs/
+__pycache__/
+*.pyc
+.pytest_cache/
+results/predictions/
+# poids lourds : publiez-les en release GitHub plutôt que dans le dépôt
+weights/*.pt
+yolov8*.pt
+yolo11*.pt
